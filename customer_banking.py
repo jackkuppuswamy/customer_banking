@@ -24,16 +24,19 @@ def main():
         savings_balance = float(input("Enter the savings account balance: "))        
     except ValueError:
         print("Please enter a valid account balance.")
+        return
     
     try:
         savings_interest = float(input("Enter the savings account interest rate: "))        
     except ValueError:
         print("Please enter a valid interest rate.")
-
+        return
+    
     try:
         savings_maturity = int(input("Enter the number of months: "))
     except ValueError:
         print("Please enter a valid number of months.")
+        return
 
     # Call the create_savings_account function and pass the variables from the user.
     savings_account = create_savings_account(savings_balance, savings_interest, savings_maturity)
@@ -48,17 +51,20 @@ def main():
         cd_balance= float(input("Enter the CD account balance: "))
     except ValueError:
         print("Please enter a valid account balance.")
+        return
     
     try:
         cd_interest = float(input("Enter the CD account interest rate: "))
     except ValueError:
         print("Please enter a valid interest rate.")
+        return
 
     try:
         cd_maturity = int(input("Enter the number of months: "))
     except ValueError:
         print("Please enter a valid number of months.")
-        
+        return
+
     # Call the create_cd_account function and pass the variables from the user.
     cd_account = create_cd_account(cd_balance, cd_interest, cd_maturity)
     updated_cd_balance, interest_earned = cd_account
